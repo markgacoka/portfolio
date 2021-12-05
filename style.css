@@ -117,13 +117,26 @@ small {
     width: 100%;
     min-height: 100vh;
     padding: 100px;
+    align-items: center;
+    transition: 1s;
+}
+
+.sechome {
+    position: relative;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     transition: 1s;
 }
 
 .sec.active {
+    left: 100%;
+}
+
+.sechome.active {
     left: 100%;
 }
 
@@ -197,7 +210,7 @@ header {
     letter-spacing: 1px;
 }
 
-.sec .imgBox {
+.sechome .imgbox {
     position: relative;
     min-width: 500px;
     height: 500px;
@@ -205,31 +218,31 @@ header {
     overflow: hidden;
 }
 
-.sec .content {
+.sechome .content {
     max-width: 700px;
     margin-left: 40px;   
 }
 
-.sec .content h2 {
+.sechome .content h2 {
     font-weight: 500;
     letter-spacing: 1px;
     color: rgba(9, 14, 36, 0.9);
     line-height: 2.5em;
 }
 
-.sec .content h2 span {
+.sechome .content h2 span {
     font-weight: 700;
     color: rgba(9, 14, 36, 0.9);
     font-size: 3rem;
 }
 
-.sec .content p {
+.sechome .content p {
     color: rgba(9, 14, 36, 0.9);
     font-size: 1.2em;
     margin-bottom: 20px;
 }
 
-.sec .content .btn {
+.sechome .content .btn {
     background: rgba(9, 14, 36, 0.9);
 }
 
@@ -276,7 +289,7 @@ footer {
     header, footer {
         padding: 20px 40px;
     }
-    .sec .imgBox {
+    .sechome .imgbox {
         width: 300px;
         min-width: 300px;
         height: 300px;
@@ -474,4 +487,29 @@ footer {
 
 .pad {
     padding: 12px;
+    width: 40%;
+}
+.row {
+    min-width: 50%;
+    width: 50%;
+}
+
+@media screen and (max-width: 1660px) {
+    .pad {
+        width: 100%;
+    }
+    .row {
+        width: 100%;
+    }
+    .card1::before {
+        transform: none;
+        transition: none;
+        background: #f2f8f9;
+    }
+    .card1:hover h3 {
+        color: #262626;
+    }
+    .card1:hover p {
+        color: #262626;
+    }
 }
